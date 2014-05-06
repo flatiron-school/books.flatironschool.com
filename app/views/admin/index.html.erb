@@ -1,0 +1,39 @@
+<div class="row" id="admin-wrapper">
+  <div class="col-md-8 col-md-offset-2">
+
+    <%= render "stats" %>
+
+    <br />
+    <hr />
+    <br />
+
+    <%= render "create_tags" %>
+
+    <br />
+    <hr />
+    <br />
+
+    <%= render "admin_list" %>
+
+    <br />
+    <hr />
+    <br />
+
+    <h4>Uploads</h4>
+
+    <% unless @incompletes.empty? %>
+      <%= link_to "resolve incomplete files", types_path %>
+    <% end %>    
+    <br />
+
+    <%= render "types/upload_form" %>
+    
+
+    <br />
+    <hr />
+    <br />
+
+    <%= render "orgs_list" %>
+
+  </div>
+</div>

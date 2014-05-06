@@ -1,0 +1,24 @@
+<h4>Search</h4>
+<div class="filter">
+  <%= form_tag user_books_path, :remote => true do %>
+    <%= select_tag :book_ids, options_from_collection_for_select(Book.all, "id", "title"),
+      { include_blank: true,  class: 'chosen-select', multiple: true, :'data-placeholder'=>"Books", :id => "users_by_book" }
+    %>
+    <%= select_tag :user_ids, options_from_collection_for_select(User.all, "id", "nickname"),
+      { include_blank: true,  class: 'chosen-select', multiple: true, :'data-placeholder'=>"Students", :id => "books_by_user"}
+    %>
+    <%= hidden_field_tag :sort_by, "book" %>
+  <% end %>
+</div>
+  <div class="switch white">
+    <input type="radio" name="switch" id="switch-off">
+    <input type="radio" name="switch" id="switch-on" checked>
+    <label for="switch-off">By book</label>
+    <label for="switch-on">By student</label>
+
+    <span class="toggle"></span>
+
+</div> <!-- end switch -->
+<div class="student-list">
+  <p class="placeholder">this is where the results will appear...</p>
+</div>

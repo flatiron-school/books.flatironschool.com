@@ -1,0 +1,4 @@
+<% @orgs.each do |org| %>
+  $(".org-list").append("<%= j render :partial => 'org', :locals => { :org => org } %>")
+<% end %>
+

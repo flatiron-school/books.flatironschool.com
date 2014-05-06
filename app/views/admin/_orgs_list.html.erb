@@ -1,0 +1,19 @@
+<h4>Authorization</h4>
+<div class="list-group org-list">
+  <div class="list-group-item">
+    <%= form_tag orgs_path, :remote => true do %>
+      <%= select_tag :orgs, options_for_select(@orgs),
+        { include_blank: true,  class: 'chosen-select', multiple: true, :'data-placeholder'=>"Authorize an organization for Booxr" }
+      %>
+      <%= submit_tag "add organization", :class => "btn btn-primary" %>
+    <% end %>
+  </div>
+  <% @current.each do |u| %>
+    <div data-orgid="<%= u.id %>" class="list-group-item"><a target="_blank" href="http://github.com/<%= u.name %>"><%= u.name %></a>
+      <div class="remove">
+        <%= button_to "remove org", destroy_org_path(u), :method => :delete, :remote => true, :class => "btn btn-danger btn-xs"  %>
+        
+      </div>  
+    </div>
+  <% end %>
+</div>

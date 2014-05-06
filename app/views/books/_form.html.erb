@@ -1,0 +1,16 @@
+<%= form_for @book, :html => { multipart: true } do |f| %>
+  <%= f.label :title %><br/>
+  <%= f.text_field :title, :class => "form-control" %><br/>
+  <%= f.label :author %><br/>
+  <%= f.text_field :author, :class => "form-control" %><br/>
+  <%= f.label :tags %><br/>
+
+  <%=select_tag 'book[tags][]', 
+    options_for_select(Tag.all.map {|t| [t.label, t.id]}, 
+    @book.tags.map {|bt| bt.id}), 
+    :multiple => true, :class => "chosen-select" %>
+  <br />
+  <br />
+  <%= f.submit :class => "btn btn-default" %>
+
+<% end %>

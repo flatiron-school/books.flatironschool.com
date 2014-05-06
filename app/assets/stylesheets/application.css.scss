@@ -1,0 +1,67 @@
+ /*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ *= require font-awesome
+ *= require bootstrap-social.css
+ *= require_tree ../../../vendor/assets/javascripts/.
+ *= require chosen
+ *= require_self
+ *= require_tree .
+
+ //= depend_on_asset "bootstrap/glyphicons-halflings-regular.eot"
+ //= depend_on_asset "bootstrap/glyphicons-halflings-regular.woff"
+ //= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
+ //= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
+ */
+
+
+@import "bootstrap";
+
+/* Some Style from the Bootstrap Default Theme */
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  // background-image:url('stardust.png');
+  background-size:200px;
+  background-color:#a3a3a3;
+}
+
+#main-font {
+  font-family: 'Kite One', sans-serif;
+  font-weight: 800;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.filter {
+  background: #FFF;
+  border-radius: 5px;
+}
+
+body.books.show div.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+body.books.show nav.navbar {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}

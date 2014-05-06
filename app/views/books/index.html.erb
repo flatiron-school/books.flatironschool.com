@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+  <div class="filters">
+
+  </div>
+  <h2>Available books</h2>
+  <div class="tag filter">
+  <%= form_tag books_sort_path, :remote => true do %>
+    <%= select_tag :tags, options_from_collection_for_select(Tag.all, "id", "label"),
+      { include_blank: true,  class: 'chosen-select', multiple: true, :'data-placeholder'=>"Search by tag" }
+    %><br />
+  <% end %>
+  </div>
+  <div class="search filter">
+  <%= form_tag books_search_path, :remote => true do %>
+    <%= select_tag :title, options_from_collection_for_select(Book.all, "id", "title"),
+      { include_blank: true,  class: 'chosen-select', multiple: true, :'data-placeholder'=>"Search by title" }
+    %><br />
+  <% end %>
+  </div>
+  <hr />
+    <div class="book-list">
+      <%= render @books %>
+    </div>
+  </div>
+</div>

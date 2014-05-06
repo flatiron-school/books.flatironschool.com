@@ -1,0 +1,14 @@
+createLink = function(callback) {
+  var link = $("<%= j render 'download_link' %>")
+  link.addClass("offscreen")
+  $("body").append(link);
+  console.log(link.href)
+  callback(link);
+}
+
+createLink(function(link) {
+  $("a.download")[0].click();
+  $("a.download")[0].remove();
+});
+
+

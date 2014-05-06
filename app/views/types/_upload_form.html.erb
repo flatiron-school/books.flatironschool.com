@@ -1,0 +1,10 @@
+<%= form_for @type do |f| %>
+<!--   <#%= fields_for @type do |t| %> -->
+  
+  <%= f.label :file %>
+
+    <%= f.file_field :file, multiple: true, name: "type[file]" %><br/>
+  <div class="file-container"></div> 
+<!--   <#% end %> -->
+  <%= f.submit :class => "btn btn-primary" %>
+<% end %>

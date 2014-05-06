@@ -1,0 +1,50 @@
+<div class="book row">
+  <div class="col-md-2">
+    <% if book.cover.path %>
+      <%= image_tag book.cover, :class => "cover" %>
+    <% else %>
+      <div class="cover-placeholder">
+        <span class="fa fa-book"></span>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-8">
+    <h3>
+      <%= link_to(book.title, book_path(book)) if book.title %>
+      <% if current_user.admin %>
+        <a href='<%= edit_book_path(book) %>'><i class="fa fa-pencil"></i></a>
+        <%= link_to "<i class=\"fa fa-times\"></i>".html_safe, book_path(book), :method => :delete %>
+
+      <% end %>
+    </h3>
+    <p>by: <%= book.author if book.author %></p>
+    <% unless !!book.tags %>
+      <p>Tags: <% book.tags.each do |t| %>
+        <span class="label label-info"><%= t.label %></span>
+      <% end %></p>
+    <% end %>
+  </div>
+
+  <div class="formats col-md-2">
+    <p>available formats:</p>
+      <% if book.pdf %>
+        <%= form_tag download_book_path(book.id), :remote => true, :method => :get do %>
+          <%= hidden_field_tag :type, "PDF" %>
+          <%= submit_tag "PDF", :class => "btn btn-default btn-xs" %>
+        <% end %>
+      <% end %>
+      <% if book.mobi %>
+        <%= form_tag download_book_path(book.id), :remote => true, :method => :get do %>
+          <%= hidden_field_tag :type, "MOBI" %>
+          <%= submit_tag "MOBI",  :class => "btn btn-default btn-xs" %>
+        <% end %>
+      <% end %>
+      <% if book.epub %>
+        <%= form_tag download_book_path(book.id), :remote => true, :method => :get do %>
+          <%= hidden_field_tag :type, "EPUB" %>
+          <%= submit_tag "EPUB", :class => "btn btn-default btn-xs" %>
+        <% end %>
+      <% end %>
+
+  </div>
+</div>

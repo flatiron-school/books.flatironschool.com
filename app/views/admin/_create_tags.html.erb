@@ -1,0 +1,9 @@
+<h4>Tags</h4>
+<div class="admin-list list-group">
+  <div class="list-group-item">
+    <%= form_for @tag, :remote => true, :id => "tag-form" do |f| %>
+      New Tag: <%= f.text_field(:label) %>
+      <%= submit_tag "add tag", :class => "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

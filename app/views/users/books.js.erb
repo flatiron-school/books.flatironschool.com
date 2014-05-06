@@ -1,0 +1,10 @@
+<% if @users %>
+  $(".student-list").html("<%= j render @users %>")
+<% elsif @books %>
+  $(".student-list").html("<%= j render :partial => 'books/trunc_book', :locals => {:books => @books } %>")
+ <% end %>   
+
+  if ($(".student-list").html() === "") {
+    $(".student-list").html("<p class='placeholder'>try another search</p>")
+  } 
+

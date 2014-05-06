@@ -1,0 +1,4 @@
+<% @users.each do |admin| %>
+  $(".admin-list").append("<%= j render :partial => 'admin', :locals => { :admin => admin } %>")
+<% end %>
+

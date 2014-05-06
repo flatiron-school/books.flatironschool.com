@@ -1,0 +1,15 @@
+
+<div class="col-md-8" id="type-<%= type.id %>">
+  <h3><%= type.book.title if type.book.title %></h3>
+  <p><%= type.format %></p>
+  <div class="type assign">
+  <%= form_tag type_path(type.id), :remote => true, :method => :patch do %>
+    <%= select_tag :title, options_from_collection_for_select(Book.with_complete_types, "id", "title"),
+      { include_blank: true,  class: 'chosen-select', multiple: true, :'data-placeholder'=>"Search by title" }
+    %><br />
+    <%= submit_tag %>
+  <% end %>
+  </div>
+</div>
+
+</div>

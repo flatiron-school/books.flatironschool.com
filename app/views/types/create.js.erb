@@ -1,0 +1,19 @@
+<% if @new %>
+  
+  var container = $(".bg-warning:first");
+  container.html("<%= j render 'upload_feedback' %>")
+  container.addClass("bg-success").removeClass("bg-warning");
+  var i = $("<i>");
+  i.addClass("fa fa-smile-o");
+  container.prepend(i);
+
+<% else %>
+
+  var container = $(".bg-warning:first");
+  container.html("<%= j render 'upload_feedback' %>")
+  container.addClass("bg-danger").removeClass("bg-warning");
+  var i = $("<i>");
+  i.addClass("fa fa-meh-o");
+  container.prepend(i);
+
+<% end %>  

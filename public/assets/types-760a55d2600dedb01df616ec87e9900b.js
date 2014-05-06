@@ -1,0 +1,1 @@
+$(function(){$("#new_type").fileupload({dataType:"script",add:function(a,n){var e=$("<div>");e.addClass("upload"),e.addClass("bg-info"),e.text(" "+n.files[0].name),e.appendTo($(".file-container")),$("#new_type").submit(function(a){var i=$("<i>");i.addClass("fa fa-spin fa-spinner"),e.prepend(i),e.addClass("bg-warning").removeClass("bg-info"),a.preventDefault(),n.submit()})}})});

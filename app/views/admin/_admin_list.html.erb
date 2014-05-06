@@ -1,0 +1,19 @@
+<h4>Admins</h4>
+<div class="admin-list list-group">
+  <div class="list-group-item">
+    <%= form_tag create_admin_path, :remote => true, :id => "admin-form" do %>
+      <%= select_tag :nickname, options_from_collection_for_select(User.non_admins, "id", "nickname"),
+        { include_blank: true,  class: 'chosen-select', multiple: true, :'data-placeholder'=>"Search by Github nickname", :id => "admin-select" }
+      %>
+      <%= submit_tag "add admin", :class => "btn btn-primary" %>
+    <% end %>
+  </div>
+  <% @admins.each do |u| %>
+    <div data-adminid="<%= u.id %>" class="list-group-item"><a target="_blank" href="http://github.com/<%= u.nickname %>"><%= u.nickname %></a>
+      <div class="remove">
+        <%= button_to "remove admin", destroy_admin_path(u), :method => :delete, :remote => true, :class => "btn btn-danger btn-xs"  %>
+        
+      </div>  
+    </div>  
+  <% end %>
+</div>

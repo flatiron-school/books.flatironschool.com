@@ -1,0 +1,14 @@
+<% if @new %>
+  <%= link_to @book.title, edit_book_path(@book) %>
+  <% if @book.title.nil? %>
+    <small>unable to find a title, click the link to add one</small><br />
+  <% end %>
+  <% if @book.author.nil? %>
+
+    <small>unable to find an author, click the link to add one</small><br />
+  <% end %>
+<% else %>
+  <p>It looks like we might already have this book in this format, here's the link we found:</p>
+  <%= link_to @book.title, edit_book_path(@book) %>
+
+<% end %>

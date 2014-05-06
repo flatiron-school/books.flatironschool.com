@@ -1,0 +1,165 @@
+// Place all the styles related to the Admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#admin-wrapper {
+  h4.heading {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .filter {
+    width: 200px;
+  }
+
+  div.list-group-item a {
+    color: black;
+    background: #FFF;
+    border-radius: 5px;
+  }
+  .list-group-item:hover {
+    .btn {
+        opacity: 1;
+      }
+  }
+
+  .remove {
+    float: right;
+    i:hover {
+    color: red;
+    }
+
+    .btn {
+      opacity: 0;
+      -webkit-transition: opacity .3s;
+    }
+
+
+  }
+
+  .signup {
+    width: 250px;
+    margin: auto;
+    margin-top: 200px;
+
+    .btn:hover {
+      color: white !important;
+    }
+
+    small {
+      margin-top: 10px;
+      display: block !important;
+      width: 250px;
+      text-align: center;
+    }
+  }
+
+
+  .student-list {
+
+    p {
+    color: #666;
+    margin: 10px;
+    }
+
+    p.placeholder {
+    color: #ccc;
+    font-style: italic;
+    margin: 20px;
+
+    }
+  }
+
+
+  .left-header {
+    float: left;
+  }
+
+
+  #books_by_user_chosen {
+    display: none;
+  }
+
+  .switch {
+    background: white;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    display: block;
+    height: 30px;
+    position: relative;
+    width: 70px;
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 80px;
+  }
+
+  .switch label {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+    text-transform: uppercase;
+    -webkit-transition: color .2s ease;
+    -moz-transition: color .2s ease;
+    -ms-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
+    width: 150px;
+  }
+
+  .switch label:nth-of-type(1) {
+    left: -10px;
+    position: absolute;
+    text-align: right;
+  }
+
+  .switch label:nth-of-type(2) {
+    position: absolute;
+    right: 15px;
+    text-align: left;
+  }
+
+  .switch input {
+    height: 64px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 160px;
+    z-index: 2;
+  }
+
+  .switch input:checked~label:nth-of-type(1) { color: #fff; }
+  .switch input:checked~label:nth-of-type(2) { color: #808080; }
+
+  .switch input~:checked~label:nth-of-type(1) { color: #808080; }
+  .switch input~:checked~label:nth-of-type(2) { color: #fff; }
+
+  .switch input:checked~.toggle {
+    left: 4px;
+  }
+
+  .switch input~:checked~.toggle {
+    left: 42px;
+  }
+
+  .switch input:checked {
+    z-index: 0;
+  }
+
+  .toggle {
+    background: #4a4a4a;
+    border-radius: 50%;
+    height: 22px;
+    left: 0;
+    position: absolute;
+    top: 3px;
+    -webkit-transition: left .2s ease;
+    -moz-transition: left .2s ease;
+    -ms-transition: left .2s ease;
+    -o-transition: left .2s ease;
+    transition: left .2s ease;
+    width: 22px;
+    z-index: 1;
+  }
+}
