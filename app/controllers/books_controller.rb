@@ -60,8 +60,6 @@ class BooksController < ApplicationController
     end
   end
 
-
-
   def search
     if params[:title]
       @books = Book.find_by(:id => params[:title][0])
@@ -90,12 +88,11 @@ class BooksController < ApplicationController
   end
 
   private
+    def type_params
+      params.require(:type).permit(:file)
+    end
 
-  def type_params
-    params.require(:type).permit(:file)
-  end
-
-  def book_params
-    params.require(:book).permit(:title, :author, :tags => [])
-  end
+    def book_params
+      params.require(:book).permit(:title, :author, :tags => [])
+    end
 end
