@@ -21,16 +21,15 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+# gem 'spring',        group: :development
 
-gem 'figaro', git: 'https://github.com/laserlemon/figaro.git'
+gem 'figaro', github: 'laserlemon/figaro', ref: 'e16f2d47f6516e8420ce21c9de76785d9f244bae'
 gem 'omniauth-github'
 
 gem "font-awesome-rails"
 
 gem "octokit", "~> 2.0"
-gem 'epubinfo', :git => 'https://github.com/georgemayer/epubinfo.git'
-
+gem 'epubinfo', :github => "versapub/epubinfo"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -43,8 +42,6 @@ gem 'epubinfo', :git => 'https://github.com/georgemayer/epubinfo.git'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-
 
 group :test, :development do
   gem "rspec-rails"
