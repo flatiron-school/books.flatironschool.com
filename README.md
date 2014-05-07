@@ -7,10 +7,10 @@ A database of books used in the Ruby classroom. Originally written by [den1k](ht
 ## Local Setup
 
 1. `rake db:schema:load` locally to set up schema.
-2. Comment out contents of `initializers/carrierwave.rb`
-3. `rails generate figaro install`
-4. Set AMAZON_KEY, AMAZON_SECRET, and AMAZON_BUCKET in `application.yml`
-5. Comment in contents of `initializers/carrierwave.rb`
+2. Comment out contents of `initializers/carrierwave.rb`.
+3. `rails generate figaro install`.
+4. Set AMAZON_KEY, AMAZON_SECRET, and AMAZON_BUCKET in `application.yml`.
+5. Comment in contents of `initializers/carrierwave.rb`.
 
 ## Author
 
