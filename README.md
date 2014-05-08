@@ -18,6 +18,8 @@ A database of books used in the Ruby classroom. Originally written by [den1k](ht
 2. Ability for admin to add books
 3. Currently loading PDF from Mozilla first, where our aws link is passed in as params, with page number as second param --> clean up / fix
 4. Slugify book name for params (instead of having ID)
+5. Support CHMs
+6. Better UX for mobile
 
 ## Author
 
