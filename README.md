@@ -2,7 +2,7 @@
 
 ## Description
 
-A database of books used in the Ruby classroom. Originally written by [den1k](https://github.com/den1k/booxr).
+A database of books used in the Ruby classroom. Originally written by [den1k](https://github.com/den1k/booxr) and [georgemayer](https://github.com/georgemayer/).
 
 ## Local Setup
 
