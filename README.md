@@ -19,6 +19,9 @@ A database of books used in the Ruby classroom. Originally written by [den1k](ht
 3. Support CHMs
 4. Better UX for mobile
 5. Flesh out downloading count to then have licensing countdown
+6. Add way to make cover photo of PDFs
+7. Add way to manually upload cover photo
+8. Add tags
 
 ## Author
 
