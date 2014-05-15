@@ -9,8 +9,6 @@
 
 # User.create(provider: "github", uid: "4651810", nickname: "den1k", admin: true, token: "f362d5cac8bb6857ed23698a2350e806770a0eb4")
 
-User.create(provider: "github", uid: "5709920", nickname: "kthffmn", admin: true, token: "298ceabf750712fac031613ca3190a1361391f7a")
-
-User.create(nickname: "sally", admin: false)
+# User.create(nickname: "sally", admin: false)
 
 Organization.create(name: "flatiron-school-students")
