@@ -1,6 +1,6 @@
 class Book < ActiveRecord::Base
   extend FriendlyId
-  friendly_id :title, use: [:slugged, :history]
+  friendly_id :title, use: [:slugged, :finders]
 
   has_many :types, dependent: :destroy
   has_many :user_books
@@ -10,6 +10,10 @@ class Book < ActiveRecord::Base
 
   has_many :book_tags
   has_many :tags, :through => :book_tags
+
+  def should_generate_new_friendly_id?
+    slug.blank? || title_changed?
+  end
 
   def self.with_complete_types
     joins(:types).where(types:{incomplete: false}).uniq
