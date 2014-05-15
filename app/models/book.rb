@@ -1,4 +1,7 @@
 class Book < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :history]
+
   has_many :types, dependent: :destroy
   has_many :user_books
   has_many :users, through: :user_books
