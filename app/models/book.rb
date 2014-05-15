@@ -17,7 +17,7 @@ class Book < ActiveRecord::Base
   end
 
   def pdf_url
-    pdf_type = types.where(:format => "PDF")
+    types.where(:format => "PDF").first.file.url
   end
 
   def self.create_with_type(params, type)
