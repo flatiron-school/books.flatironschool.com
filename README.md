@@ -6,11 +6,11 @@ A database of books used in the Ruby classroom. Originally written by [den1k](ht
 
 ## Local Setup
 
-1. `rake db:schema:load` locally to set up schema.
-2. Comment out contents of `initializers/carrierwave.rb`.
-3. `rails generate figaro install`.
-4. Set AMAZON_KEY, AMAZON_SECRET, AMAZON_BUCKET, GITHUB_KEY, and GITHUB_SECRET in `application.yml`.
-5. Comment in contents of `initializers/carrierwave.rb`.
+1. Set AMAZON_KEY, AMAZON_SECRET, AMAZON_BUCKET, GITHUB_KEY, and GITHUB_SECRET in `application.yml`.
+2. `rake db:migrate` locally to set up schema.
+3. `rake db:seed` to add the organization flatiron-school-students to the organizations table.
+4. `rails s` and login through GitHub
+5. `User.last.update(:admin => true)` in the `rails console` to become an admin.
 
 ## TODO
 
