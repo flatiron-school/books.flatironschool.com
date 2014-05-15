@@ -1,1 +1,0 @@
-$(document).ready(function(){$(".chosen-select").chosen({width:"100%"}),$(".tag.filter .chosen-select").on("change",function(){$(this).parents("form").submit()}),$(".search.filter .chosen-select").on("change",function(){$(this).parents("form").submit()})});
