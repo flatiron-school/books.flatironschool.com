@@ -24,17 +24,20 @@ class BooksController < ApplicationController
   def show
     params[:page] ||= 1
     
-    @book = Book.find(params[:id])
+    @book = Book.friendly.find(params[:id])
+    if request.path != book_path(@book)
+      redirect_to @book, status: :moved_permanently
+    end
   end
 
   def destroy
-    @book = Book.find(params[:id])
+    @book = Book.friendly.find(params[:id])
     @book.destroy
     redirect_to books_path
   end
 
   def update
-    @book = Book.find(params[:id])
+    @book = Book.friendly.find(params[:id])
     if params[:type]
       @type = Type.new(type_params)
       @book.add_type(@type)
@@ -48,7 +51,7 @@ class BooksController < ApplicationController
   end
 
   def edit
-    @book = Book.find(params[:id])
+    @book = Book.friendly.find(params[:id])
     @type = Type.new
   end
 
@@ -77,7 +80,7 @@ class BooksController < ApplicationController
   end
 
   def download
-    @book = Book.find(params[:id])
+    @book = Book.friendly.find(params[:id])
     @format = params[:type]
     @files = @book.types.where(:format => @format)
     unless current_user.books.include?(@book)
