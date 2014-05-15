@@ -74,3 +74,5 @@ gem 'pdf-reader'
 gem 'mobi'
 
 gem "jquery-fileupload-rails"
+
+gem "friendly_id", "~> 5.0.1"
