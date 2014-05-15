@@ -40,3 +40,27 @@ $(document).ready (function() {
     }
   });
 })
+
+function insertPDF(url, page){
+  var bookPDF = new PDFObject({
+    url: url,
+    pdfOpenParams: {
+      page: page
+    }
+  }).embed("book");
+
+  return bookPDF;
+};
+
+function loadPDF(){
+  $("div#book[data-pdf-url]").exists(function(){
+    var pdfURL = $(this).data("pdf-url");
+    var pdfPage = $(this).data("pdf-page")
+    insertPDF(pdfURL, pdfPage)
+  });
+};
+
+$(function(){
+  loadPDF();
+});
+

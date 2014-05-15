@@ -1,3 +1,3 @@
-<div id="full-width-and-height">
-  <iframe id="pdf-viewer" src="http://mozilla.github.com/pdf.js/web/viewer.html?file=<%= @book.pdf_url %>#page=<%= params[:page] || 1 %>"></iframe>
+<div id="book" class="full-width-and-height" data-pdf-url="<%= @book.pdf_url %>" data-pdf-page="<%= params[:page] %>">
+
 </div>

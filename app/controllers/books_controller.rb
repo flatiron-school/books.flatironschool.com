@@ -22,6 +22,8 @@ class BooksController < ApplicationController
   end
 
   def show
+    params[:page] ||= 1
+    
     @book = Book.find(params[:id])
   end
 
