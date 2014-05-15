@@ -2,7 +2,7 @@
 
 ## Description
 
-A database of books used in the Ruby classroom. Originally written by [den1k](https://github.com/den1k/booxr).
+A database of books used in the Ruby classroom. Originally written by [den1k](https://github.com/den1k/booxr) and [georgemayer](https://github.com/georgemayer/).
 
 ## Local Setup
 
@@ -14,10 +14,14 @@ A database of books used in the Ruby classroom. Originally written by [den1k](ht
 
 ## TODO
 
-1. Build out admin so that anyone a part of 'flatiron-school' github organization is given admin privileges when logging in via OAuth.
-2. Ability for admin to add books
-3. Currently loading PDF from Mozilla first, where our aws link is passed in as params, with page number as second param --> clean up / fix
-4. Slugify book name for params (instead of having ID)
+1. Currently loading PDF from Mozilla first, where our aws link is passed in as params, with page number as second param --> clean up / fix
+2. Slugify book name for params (instead of having ID)
+3. Support CHMs
+4. Better UX for mobile
+5. Flesh out downloading count to then have licensing countdown
+6. Add way to make cover photo of PDFs
+7. Add way to manually upload cover photo
+8. Add tags
 
 ## Author
 
