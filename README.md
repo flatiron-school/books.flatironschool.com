@@ -6,7 +6,7 @@ A database of books used in the Ruby classroom. Originally written by [den1k](ht
 
 ## Local Setup
 
-1. Set AMAZON_KEY, AMAZON_SECRET, AMAZON_BUCKET, GITHUB_KEY, and GITHUB_SECRET in `application.yml`.
+1. Set AMAZON_KEY, AMAZON_SECRET, AMAZON_BUCKET, GITHUB_KEY, and GITHUB_SECRET in `config/application.yml`.
 2. Run `rake db:migrate`
 3. Run `rake db:seed` to add the organization flatiron-school-students to the organizations table.
 4. Run local server with `rails s` and go to `http://localhost:3000/` in your browser before logging in via GitHub.
