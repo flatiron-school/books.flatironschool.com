@@ -168,6 +168,9 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
+    pdfobject-rails (0.0.1)
+      railties (>= 3.1)
+      thor
     pg (0.17.1)
     polyglot (0.3.4)
     pry (0.9.12.6)
@@ -292,6 +295,7 @@ DEPENDENCIES
   octokit (~> 2.0)
   omniauth-github
   pdf-reader
+  pdfobject-rails
   pg
   pry
   rails (= 4.1.0.rc2)

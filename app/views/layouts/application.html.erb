@@ -7,14 +7,7 @@
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
   <link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/pdfjs/viewer.css"/>
-  <script type="text/javascript" src="/pdfjs/compatibility.js"></script>
-  <link rel="resource" type="application/l10n" href="/pdfjs/locale/locale.properties"/>
-  <script type="text/javascript" src="/pdfjs/l10n.js"></script>
-  <script type="text/javascript" src="http://mozilla.github.io/pdf.js/build/pdf.js"></script>
-  <script type="text/javascript" src="/pdfjs/web/debugger.js"></script>
-  <script type="text/javascript" src="http://mozilla.github.io/pdf.js/build/viewer.js"></script>
-</head>
+  </head>
 <body tabindex="1" class="<%= "#{params[:controller]} #{params[:action]}" %>">
   <nav class="navbar navbar-default" role="navigation">
     <a class="navbar-brand" href="<%= books_path %>" id="main-font">Booxr</a>
