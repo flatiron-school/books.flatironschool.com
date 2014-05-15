@@ -17,8 +17,7 @@ class Book < ActiveRecord::Base
   end
 
   def pdf_url
-    root = "http://flatiron-booxr.s3.amazonaws.com/"
-    types.map {|t| root.dup << t.file.file.path.to_s if t.format == "PDF"}.compact[0]
+    pdf_type = types.where(:format => "PDF")
   end
 
   def self.create_with_type(params, type)
