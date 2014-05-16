@@ -37,3 +37,6 @@ GITHUB_SECRET: NUMBERSANDLETTERS
 ## License
 
 My Spiffy App is MIT Licensed. See LICENSE for details.
+
+## Resources
+* [PDF.js](http://www.askapache.com/javascript/pdf-js.html)-[Page Number Docs](http://www.askapache.com/javascript/pdf-js.html#Options_after_the-s0)
