@@ -18,6 +18,5 @@
 
 //= require bootstrap
 //= require chosen
-//= require pdfobject-rails/pdfobject.min
 
 //= require_tree .
