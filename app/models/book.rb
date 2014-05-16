@@ -1,6 +1,6 @@
 class Book < ActiveRecord::Base
   extend FriendlyId
-  friendly_id :title, use: [:slugged, :finders]
+  friendly_id :title, use: [:slugged, :finders, :history]
 
   has_many :types, dependent: :destroy
   has_many :user_books
