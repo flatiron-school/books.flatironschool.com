@@ -2,7 +2,7 @@
 
 ## Description
 
-A database of books used in the Ruby classroom. Originally written by [den1k](https://github.com/den1k/booxr) and [georgemayer](https://github.com/georgemayer/). To specify a page number for a PDF, simply add it to the end of the URL, like so: [`http://books.flatironschool.com/books/77?page=24`](http://books.flatironschool.com/books/77?page=24).
+A database of books used in the Ruby classroom. Originally written by [den1k](https://github.com/den1k/booxr) and [georgemayer](https://github.com/georgemayer/). To specify a page number for a PDF, simply add it to the end of the URL, like so: [http://books.flatironschool.com/books/77?page=24](http://books.flatironschool.com/books/77?page=24).
 
 ## Local Setup
 
