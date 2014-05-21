@@ -1,8 +1,12 @@
 // Place all the styles related to the Admin controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.switch-container {
+  padding: 10px 0px 10px;
+}
 
 #admin-wrapper {
+
   h4.heading {
     float: left;
     margin-right: 10px;

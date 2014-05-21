@@ -14,6 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-fileupload/basic
+//= require iphone-style-slider
 //= require helpers
 
 //= require bootstrap

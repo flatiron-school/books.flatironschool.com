@@ -27,18 +27,6 @@ $(document).ready (function() {
     $("#type_file").click();
   })
 
-  $('.switch').click(function() {
-    var val = $("#sort_by").val();
-    if( val === "book") {
-      $("#sort_by").val("user");
-      $("#books_by_user_chosen").show();
-      $("#users_by_book_chosen").hide();
-    } else {
-      $("#sort_by").val("book");
-      $("#books_by_user_chosen").hide();
-      $("#users_by_book_chosen").show();
-    }
-  });
 })
 
 function insertPDF(url, page){
