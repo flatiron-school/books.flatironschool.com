@@ -2,15 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
 body {
   padding-top: 0px !important;
 }
 
-a {
-  color: #f8f8f8;
+a:link {color:#333333;}
+a:visited {color:#333333;}
+a:hover {
+  color:#787878;
+  text-decoration: none;
 }
+a:active {color:#787878;}
 
 .navbar-right:last-child {
   margin-right: 0px !important;
