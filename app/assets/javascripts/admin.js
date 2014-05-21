@@ -10,7 +10,7 @@ $(document).ready (function() {
   });
 
   $(document).on("click", '.iPhoneCheckHandleRight, .iPhoneCheckLabelOff, .iPhoneCheckLabelOn', function() {
-    if($("#search-switch").prop('checked')) {
+    if($("#search-switch").prop('checked') == false) {
       $("#sort_by").val("user");
       $("#books_by_user_chosen").show();
       $("#users_by_book_chosen").hide();
