@@ -21,6 +21,8 @@ $(document).ready (function() {
     }
   });
 
+  $('.iPhoneCheckHandle').css('width', '132');
+
   $('.chosen-select').chosen({width: "100%"});
 
   $('.tag.filter .chosen-select').on("change", function() {
