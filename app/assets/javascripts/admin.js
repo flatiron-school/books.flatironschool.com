@@ -5,8 +5,8 @@
 $(document).ready (function() {
 
   $("#search-switch").iphoneStyle({
-    checkedLabel: "BY BOOKS",
-    uncheckedLabel: "BY STUDENTS"
+    checkedLabel: "BOOKS",
+    uncheckedLabel: "STUDENTS"
   });
 
   $(document).on("click", '.iPhoneCheckHandleRight, .iPhoneCheckLabelOff, .iPhoneCheckLabelOn', function() {
@@ -21,7 +21,7 @@ $(document).ready (function() {
     }
   });
 
-  $('.iPhoneCheckHandle').css('width', '132');
+  $('.iPhoneCheckHandle').css('width', '103');
 
   $('.chosen-select').chosen({width: "100%"});
 
