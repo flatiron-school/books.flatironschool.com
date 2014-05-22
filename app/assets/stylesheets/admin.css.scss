@@ -79,11 +79,13 @@
     float: left;
   }
 
-
   #books_by_user_chosen {
     display: none;
   }
 
+  #users_by_book_chosen {
+    display: block;
+  }
   .switch {
     background: white;
     border-radius: 15px;
