@@ -65,6 +65,8 @@ end
 
 gem "bootstrap-sass", "~> 3.1.1"
 
+# RMagick is to to capture the cover page of a PDF
+gem 'rmagick'
 
 gem 'carrierwave'
 gem 'fog'
