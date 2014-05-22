@@ -24,6 +24,10 @@ class Type < ActiveRecord::Base
       info = reader.info
       book_title = info[:Title]
       book_author = info[:Author]
+      img_path = Rails.root.join(file.file.file).to_s[0..-1] + "[0]"
+      cover = Magick::Image.read(img_path)
+      book_cover = cover[0]
+      #todo - book_cover currently not functional
     elsif format == "MOBI"
       reader = Mobi::Metadata.new(content)
       book_author = reader.author
