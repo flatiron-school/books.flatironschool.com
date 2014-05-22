@@ -1,10 +1,11 @@
 class TagsController < ApplicationController
   def create
-    found = Tag.find_by(label: params[:tag][:label])
+    found = Tag.find_by(label: params[:tag][:label].downcase)
     if found
       @message = "#{found.label} tag already exists"
     else
-      @tag = Tag.create(set_params)
+      lowercase_label = set_params["label"].downcase
+      @tag = Tag.create(:label => lowercase_label)
       @message = "#{@tag.label} tag created"
     end
     respond_to do |f|
