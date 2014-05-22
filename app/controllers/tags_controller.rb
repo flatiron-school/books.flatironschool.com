@@ -1,10 +1,11 @@
 class TagsController < ApplicationController
   def create
-    if Tag.find_by(label: params[:tag][:label])
-      @message = "We already have that one"
+    found = Tag.find_by(label: params[:tag][:label])
+    if found
+      @message = "#{found.label} tag already exists"
     else
       @tag = Tag.create(set_params)
-      @message = "created!"
+      @message = "#{@tag.label} tag created"
     end
     respond_to do |f|
       f.js
