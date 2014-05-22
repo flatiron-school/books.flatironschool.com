@@ -9,6 +9,7 @@
 
 # User.create(provider: "github", uid: "4651810", nickname: "den1k", admin: true, token: "f362d5cac8bb6857ed23698a2350e806770a0eb4")
 
-# User.create(nickname: "sally", admin: false)
-
 Organization.create(name: "flatiron-school-students")
+
+TAGS = ["ruby", "javascript", "css", "rails", "html", "d3", "command line", "oop", "beginner", "advanced", "intermediate"]
+TAGS.each{|t|Tag.create(:label => t)}
