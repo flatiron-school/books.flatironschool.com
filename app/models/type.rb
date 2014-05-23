@@ -16,51 +16,60 @@ class Type < ActiveRecord::Base
     !self.class.all.map {|i| i.filename}.include? self.filename
   end
 
+  def pdf_processing(content)
+    reader = PDF::Reader.new(content)
+    title = reader.info[:Title]
+    temp_cover_path = "#{Rails.root}/tmp/#{title}-cover.png"
+    img_path = Rails.root.join(file.file.file).to_s[0..-1] + "[0]"
+    cover = Magick::Image.read(img_path)
+    file = cover[0].write(temp_cover_path)
+    { :author => reader.info[:Author], 
+      :title => title, 
+      :cover => File.open(temp_cover_path),
+      :temp_path => temp_cover_path}
+  end
+
+  def mobi_processing(content)
+    reader = Mobi::Metadata.new(content)
+    { :author => reader.author, 
+      :title => reader.title, 
+      :cover => nil,
+      :temp_path => nil }
+  end
+
+  def epub_processing(content)
+    reader = EPUBInfo.get(content)
+    reader.cover.tempfile ? cover = File.open(reader.cover.tempfile.path) : cover = nil
+    { :author => reader.creators.first.name,
+      :title => reader.titles.first,
+      :cover => cover, 
+      :temp_path => nil }
+  end
+
+  def approved_type?(format)
+    format == "PDF" || format == "MOBI" ||  format == "EPUB" ? true : false
+  end
+
   def attach_metadata
+    book_info = {}
     content = open(Rails.root.join(file.file.file))
     format = self.assign_format
-    if format == "PDF"
-      reader = PDF::Reader.new(content)
-      info = reader.info
-      book_title = info[:Title]
-      book_author = info[:Author]
-      img_path = Rails.root.join(file.file.file).to_s[0..-1] + "[0]"
-      cover = Magick::Image.read(img_path)
-      temp_cover_path = "#{Rails.root}/tmp/#{book_title}-cover.png"
-      file = cover[0].write(temp_cover_path)
-      book_cover = File.open(temp_cover_path)
-    elsif format == "MOBI"
-      reader = Mobi::Metadata.new(content)
-      book_author = reader.author
-      book_title = reader.title
-    elsif format == "EPUB"
-      reader = EPUBInfo.get(content)
-      book_author = reader.creators.first.name
-      book_title = reader.titles.first
-      book_cover = File.open(reader.cover.tempfile.path) if reader.cover.tempfile
-    end
+    book_info = send(format.downcase + "_processing", content) if approved_type?(format)
     begin
-    book_title = book_title.gsub(/\(([^\)]+)\)/, "").split(",")[0].strip
-    book = Book.find_or_initialize_by(title: encode_utf8(book_title))
-    book.author = encode_utf8(book_author)
-    self.incomplete = false
+      title = book_info[:title].gsub(/\(([^\)]+)\)/, "").split(",")[0].strip
+      book = Book.find_or_initialize_by(title: encode_utf8(title))
+      book.author = encode_utf8(book_info[:author]) if book_info[:author]
+      book.cover = book_info[:cover] if book_info[:cover]
+      self.incomplete = false
     rescue
       book = Book.find_or_initialize_by(title: file.filename)
       self.incomplete = true
     end
-    book.cover = book_cover if book_cover
     add_filename_to_types
-    case format 
-    when "PDF"
-      book.pdf = true
-    when "MOBI"
-      book.mobi = true
-    when "EPUB"
-      book.epub = true 
-    end   
+    book.send("#{(format.downcase).to_sym}=", true) if approved_type?(format)
     book.types << self
     book.save
-    temp_cover_path ? FileUtils.rm(temp_cover_path) : nil
+    FileUtils.rm(book_info[:temp_path]) if book_info[:temp_path]
   end
 
   def encode_utf8(text)
@@ -92,7 +101,6 @@ class Type < ActiveRecord::Base
     elsif type.include? "zip"
       unzip
     end
-
   end
 
 end
