@@ -68,6 +68,9 @@ gem "bootstrap-sass", "~> 3.1.1"
 # RMagick is to to capture the cover page of a PDF
 gem 'rmagick'
 
+# Mini_Magick is to resize cover photos
+gem 'mini_magick' 
+
 gem 'carrierwave'
 gem 'fog'
 gem 'rubyzip'

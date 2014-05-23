@@ -26,8 +26,6 @@ class Type < ActiveRecord::Base
       book_author = info[:Author]
       img_path = Rails.root.join(file.file.file).to_s[0..-1] + "[0]"
       cover = Magick::Image.read(img_path)
-      # cover_file = Tempfile.new(book_title.gsub(' ','-'))
-      # cover_file.write(cover[0])
       temp_cover_path = "#{Rails.root}/tmp/#{book_title}-cover.png"
       file = cover[0].write(temp_cover_path)
       book_cover = File.open(temp_cover_path)
@@ -62,7 +60,7 @@ class Type < ActiveRecord::Base
     end   
     book.types << self
     book.save
-    temp_cover_path ? FileUtils.rm(temp_cover_path)
+    temp_cover_path ? FileUtils.rm(temp_cover_path) : nil
   end
 
   def encode_utf8(text)

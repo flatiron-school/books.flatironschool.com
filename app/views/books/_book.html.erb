@@ -1,7 +1,7 @@
 <div class="book row">
   <div class="col-md-2">
     <% if book.cover.path %>
-      <%= image_tag book.cover, :class => "cover" %>
+      <%= image_tag book.cover.url(:thumb), :class => "cover" %>
     <% else %>
       <div class="cover-placeholder">
         <span class="fa fa-book"></span>
