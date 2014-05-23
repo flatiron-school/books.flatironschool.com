@@ -10,7 +10,12 @@
   </head>
 <body tabindex="1" class="<%= "#{params[:controller]} #{params[:action]}" %>">
   <nav class="navbar navbar-default" role="navigation">
-    <a class="navbar-brand" href="<%= books_path %>" id="main-font">Library</a>
+    <a class="navbar-brand" href="http://flatironschool.com" id="main-font">
+      <img src= "<%= "#{root_url}" %>assets/logos/flatiron.svg"/>
+    </a>
+    <ul class="nav navbar-nav navbar-left">
+      <li><%= link_to "Library", books_path %></li>
+    </ul>
     <ul class="nav navbar-nav">
       <% if current_user && current_user.admin %>
         <li><%= link_to "Admin", admin_path %></li>
