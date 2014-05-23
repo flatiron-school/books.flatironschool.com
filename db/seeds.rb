@@ -11,5 +11,6 @@
 
 Organization.create(name: "flatiron-school-students")
 
-TAGS = ["ruby", "javascript", "css", "rails", "html", "d3", "command line", "oop", "beginner", "advanced", "intermediate"]
+TAGS = %w(advanced beginner command command css d3 database gem html intermediate javascript library line line oop orm rails ruby sql)
+
 TAGS.each{|t|Tag.create(:label => t)}
