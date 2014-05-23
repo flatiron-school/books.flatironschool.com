@@ -5,7 +5,7 @@
       <%= select_tag :nickname, options_from_collection_for_select(User.non_admins, "id", "nickname"),
         { include_blank: true,  class: 'chosen-select', multiple: true, :'data-placeholder'=>"Search by Github nickname", :id => "admin-select" }
       %>
-      <%= submit_tag "add admin", :class => "btn btn-primary" %>
+      <%= submit_tag "Add admin", :class => "btn btn-primary" %>
     <% end %>
   </div>
   <% @admins.each do |u| %>

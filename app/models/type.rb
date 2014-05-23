@@ -26,7 +26,7 @@ class Type < ActiveRecord::Base
     { :author => reader.info[:Author], 
       :title => title, 
       :cover => File.open(temp_cover_path),
-      :temp_path => temp_cover_path}
+      :temp_path => temp_cover_path }
   end
 
   def mobi_processing(content)
