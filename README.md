@@ -22,13 +22,13 @@ GITHUB_SECRET: NUMBERSANDLETTERS
 ## TODO
 
 1. Currently loading PDF from Mozilla first, where our aws link is passed in as params, with page number as second param --> clean up / fix
-2. Slugify book name for params (instead of having ID)
+2. ~~Slugify book name for params (instead of having ID)~~
 3. Support CHMs
 4. Better UX for mobile
 5. Flesh out downloading count to then have licensing countdown
-6. Add way to make cover photo of PDFs
+6. ~~Add way to make cover photo of PDFs~~
 7. Add way to manually upload cover photo
-8. Add tags
+8. ~~Add tags~~
 
 ## Author
 
