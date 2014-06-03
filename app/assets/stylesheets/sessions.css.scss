@@ -1,3 +1,30 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.text-center {
+  text-align: center
+}
+
+.sign-in-via-github-container {
+  text-align: center;
+  width: auto;
+}
+
+.smaller-container {
+  background-color: #f8f8f8;
+  display: inline-block;
+  padding: 10px 210px 10px 210px;
+  border-radius: 5px;
+  border: solid 1px;
+  border-color: lightgrey;
+  margin-bottom: 10px;
+}
+
+.smaller-container:hover {
+  background-color: #45A2CE;
+  color: white;
+  .github-logo {
+    color: white;
+  }
+}
