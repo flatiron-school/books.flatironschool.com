@@ -5,9 +5,20 @@
   padding: 10px 0px 10px;
 }
 
-#books_by_user_chosen {
+.grey-background {
+  background-color: #428BCA;
+  color: white;
+  border-radius: 5px;
+}
+
+#books_by_user {
+  display: inline-block;
+}
+
+#users_by_book {
   display: none;
 }
+
 .upload-and-org-section {
   background-color: #f8f8f8;
   width: 100%;
@@ -37,8 +48,8 @@
   }
   .list-group-item:hover {
     .btn {
-        opacity: 1;
-      }
+      opacity: 1;
+    }
   }
 
   .remove {
@@ -46,13 +57,10 @@
     i:hover {
     color: red;
     }
-
     .btn {
       opacity: 0;
       -webkit-transition: opacity .3s;
     }
-
-
   }
 
   .signup {
@@ -88,83 +96,8 @@
     }
   }
 
-
   .left-header {
     float: left;
-  }
-
-  #books_by_user_chosen {
-    display: none;
-  }
-
-  #users_by_book_chosen {
-    display: block;
-  }
-  .switch {
-    background: white;
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    display: block;
-    height: 30px;
-    position: relative;
-    width: 70px;
-    float: right;
-    margin-bottom: 10px;
-    margin-right: 80px;
-  }
-
-  .switch label {
-    color: #fff;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 30px;
-    text-transform: uppercase;
-    -webkit-transition: color .2s ease;
-    -moz-transition: color .2s ease;
-    -ms-transition: color .2s ease;
-    -o-transition: color .2s ease;
-    transition: color .2s ease;
-    width: 150px;
-  }
-
-  .switch label:nth-of-type(1) {
-    left: -10px;
-    position: absolute;
-    text-align: right;
-  }
-
-  .switch label:nth-of-type(2) {
-    position: absolute;
-    right: 15px;
-    text-align: left;
-  }
-
-  .switch input {
-    height: 64px;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 160px;
-    z-index: 2;
-  }
-
-  .switch input:checked~label:nth-of-type(1) { color: #fff; }
-  .switch input:checked~label:nth-of-type(2) { color: #808080; }
-
-  .switch input~:checked~label:nth-of-type(1) { color: #808080; }
-  .switch input~:checked~label:nth-of-type(2) { color: #fff; }
-
-  .switch input:checked~.toggle {
-    left: 4px;
-  }
-
-  .switch input~:checked~.toggle {
-    left: 42px;
-  }
-
-  .switch input:checked {
-    z-index: 0;
   }
 
   .toggle {

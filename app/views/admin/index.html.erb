@@ -1,24 +1,17 @@
 <div class="container">
   <div class="row" id="admin-wrapper">
-    <div class="col-md-4">
+    <div class="col-md-4 highlight">
       <h4>Admin Page Features</h4>
-      <div class="list-group-item">
-        <ul>
-          <li>Upload files</li>
-          <li>Authorize organizations</li>
-          <li>Search by books or students</li>
-          <li>Add new admin</li>
+      <div class="list-group-item grey-background">
+        <p>Upload files</p>
+        <p>Authorize organizations</p>
+        <p>Search by books or students</p>
+        <p>Add new admin</p>
         </ul>
       </div>
     </div>
     <div class="col-md-4">
-      <h4>Uploads</h4>
-      <div class="list-group-item">
-        <% unless @incompletes.empty? %>
-        <%= link_to "resolve incomplete files", types_path %>
-        <% end %> 
-        <%= render "types/upload_form" %>
-      </div>
+      <%= render "admin_list" %>
     </div>
     <div class="col-md-4">
       <%= render "orgs_list" %>
@@ -33,7 +26,13 @@
       <%= render "create_tags" %>
     </div>
     <div class="col-md-4">
-      <%= render "admin_list" %>
+      <h4>Uploads</h4>
+      <div class="list-group-item">
+        <% unless @incompletes.empty? %>
+        <%= link_to "resolve incomplete files", types_path %>
+        <% end %> 
+        <%= render "types/upload_form" %>
+      </div>
     </div>
   </div>
 

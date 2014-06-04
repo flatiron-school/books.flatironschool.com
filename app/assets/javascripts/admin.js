@@ -32,7 +32,6 @@ $(document).ready (function() {
     $(this).parents("form").submit();
   });
 
-  // $("i.fa-edit").click(function(){
-  //   $(".edit_book").show();
-  // });
+  $("#books_by_user_chosen").hide()
+
 })
