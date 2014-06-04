@@ -22,3 +22,7 @@
 # Ignore application configuration
 /config/application.yml
 /coverage
+
+Ignore DS_Stores
+vendor/assets/images/iphone-style-checkboxes/.DS_Store
+/vendor/assets/images/ios-style-checkboxes/.DS_Store
