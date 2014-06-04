@@ -1,23 +1,40 @@
-<div class="row" id="admin-wrapper">
-  <div class="col-md-8 col-md-offset-2">
-
-    <%= render "stats" %>
-    <hr />
-
-    <%= render "create_tags" %>
-    <hr />
-
-    <%= render "admin_list" %>
-    <hr />
-
-    <h4>Uploads</h4>
-    <% unless @incompletes.empty? %>
-      <%= link_to "resolve incomplete files", types_path %>
-    <% end %> 
-    <%= render "types/upload_form" %>
-    <hr />
-
-    <%= render "orgs_list" %>
-
+<div class="container">
+  <div class="row" id="admin-wrapper">
+    <div class="col-md-4">
+      <h4>Admin Page Features</h4>
+      <div class="list-group-item">
+        <ul>
+          <li>Upload files</li>
+          <li>Authorize organizations</li>
+          <li>Search by books or students</li>
+          <li>Add new admin</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h4>Uploads</h4>
+      <div class="list-group-item">
+        <% unless @incompletes.empty? %>
+        <%= link_to "resolve incomplete files", types_path %>
+        <% end %> 
+        <%= render "types/upload_form" %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <%= render "orgs_list" %>
+    </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <%= render "stats" %>
+    </div>
+    <div class="col-md-4">
+      <%= render "create_tags" %>
+    </div>
+    <div class="col-md-4">
+      <%= render "admin_list" %>
+    </div>
+  </div>
+
 </div>

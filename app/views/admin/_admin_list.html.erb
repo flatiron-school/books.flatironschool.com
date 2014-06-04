@@ -12,7 +12,6 @@
     <div data-adminid="<%= u.id %>" class="list-group-item"><a target="_blank" href="http://github.com/<%= u.nickname %>"><%= u.nickname %></a>
       <div class="remove">
         <%= button_to "remove admin", destroy_admin_path(u), :method => :delete, :remote => true, :class => "btn btn-danger btn-xs"  %>
-        
       </div>  
     </div>  
   <% end %>

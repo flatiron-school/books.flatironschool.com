@@ -5,6 +5,20 @@
   padding: 10px 0px 10px;
 }
 
+#books_by_user_chosen {
+  display: none;
+}
+.upload-and-org-section {
+  background-color: #f8f8f8;
+  width: 100%;
+  padding: 5px 25px 25px 25px;
+}
+
+.upload-section, .org-section {
+  float: left;
+  display: inline-block;
+}
+
 #admin-wrapper {
 
   h4.heading {
