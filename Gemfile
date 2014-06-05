@@ -61,14 +61,12 @@ group :production do
   gem "pg"
   gem "google-analytics-rails"
   gem "rails_12factor"
-  gem 'pry'
-  gem 'pry-rails', :group => :development
 end
 
 gem "bootstrap-sass", "~> 3.1.1"
 
 # RMagick is to to capture the cover page of a PDF
-gem 'rmagick'
+gem 'rmagick', :require => 'RMagick'
 
 # Mini_Magick is to resize cover photos
 gem 'mini_magick' 
