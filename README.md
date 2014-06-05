@@ -4,6 +4,11 @@
 
 A database of books used in the Ruby classroom. Originally written by [den1k](https://github.com/den1k/booxr) and [georgemayer](https://github.com/georgemayer/). To specify a page number for a PDF, simply add it to the end of the URL, like so: [http://books.flatironschool.com/books/77?page=24](http://books.flatironschool.com/books/77?page=24).
 
+## Website Links
+* Original Site: [books.flatironschool](http://books.flatironschool.com/)
+* Master Branch: [library.flatironschool](http://library.flatironschool.com/)
+* Beta Branch:   [beta-library.flatironschool](http://beta-library.herokuapp.com/)
+
 ## Local Setup
 
 * Set AMAZON_KEY, AMAZON_SECRET, AMAZON_BUCKET, GITHUB_KEY, and GITHUB_SECRET in `config/application.yml`:
