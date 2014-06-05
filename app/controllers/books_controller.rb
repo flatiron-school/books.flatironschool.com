@@ -3,7 +3,7 @@ class BooksController < ApplicationController
   before_action :is_admin?, only: [:new, :create, :update, :edit, :delete]
  
   def index
-    @books = Book.with_complete_types.order(:created_at => :desc)
+    @books = Book.with_complete_types.order(:title => :asc)
   end
 
   def new
