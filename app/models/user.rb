@@ -23,4 +23,12 @@ class User < ActiveRecord::Base
     joins(:books).where("books.id IN (?)", books)
   end
 
+  before_save do |user|
+    if user.nickname == "aviflombaum" || user.nickname == "kthffmn"
+      user.admin = true
+    end
+  end
+
 end
+
+
