@@ -21,7 +21,9 @@ class Type < ActiveRecord::Base
     title = reader.info[:Title]
     temp_cover_path = "#{Rails.root}/tmp/#{title}-cover.png"
     img_path = Rails.root.join(file.file.file).to_s[0..-1] + "[0]"
+    binding.pry
     cover = Magick::Image.read(img_path)
+    binding.pry
     file = cover[0].write(temp_cover_path)
     { :author => reader.info[:Author], 
       :title => title, 
