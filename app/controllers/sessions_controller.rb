@@ -18,15 +18,15 @@ class SessionsController < ApplicationController
     if admitted
       user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth)
       session[:user_id] = user.id
-      redirect_to root_url, :notice => "Thanks #{user.nickname}, you logged in!"
+      redirect_to '/books', :notice => "Welcome to the Flatiron Library #{user.nickname}!"
     else
-      redirect_to '/login', :notice => "it doesn't look like you're a member of flatiron students on github"
+      redirect_to '/login', :notice => "Sorry, you are not a member of an authorized organization."
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, :notice => "Signed out!"
+    redirect_to '/login', :notice => "Signed out!"
   end
 
 end
