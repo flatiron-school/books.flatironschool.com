@@ -62,6 +62,7 @@ group :production do
   gem "google-analytics-rails"
   gem "rails_12factor"
   gem 'pry'
+  gem 'pry-rails', :group => :development
 end
 
 gem "bootstrap-sass", "~> 3.1.1"
