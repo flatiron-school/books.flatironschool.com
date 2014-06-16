@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   post '/books/sort' => "books#sort", :as => "books_sort"
   post '/books/search' => "books#search", :as => "books_search"
   get '/books/:id/download' => "books#download", :as => "download_book"
+  get '/books/:id/pdf' => "books#show_pdf", :as => "book_pdf"  
   
   resources :books do
     resources :types
