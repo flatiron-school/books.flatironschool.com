@@ -24,7 +24,7 @@
 
 'use strict';
 
-var DEFAULT_URL = 'https://flatiron-library-books-dev.s3.amazonaws.com/uploads/type/file/1/agile-web-development-with-rails-4_p1_0.pdf';
+var DEFAULT_URL = "https://flatiron-library-books-dev.s3.amazonaws.com/uploads/type/file/1/agile-web-development-with-rails-4_p1_0.pdf"
 var DEFAULT_SCALE = 'auto';
 var DEFAULT_SCALE_DELTA = 1.1;
 var UNKNOWN_SCALE = 0;
@@ -5397,7 +5397,7 @@ function webViewerLoad(evt) {
 
 function webViewerInitialized() {
   var params = PDFView.parseQueryString(document.location.search.substring(1));
-  var file = 'file' in params ? params.file : DEFAULT_URL;
+  var file = DEFAULT_URL;
 
   var fileInput = document.createElement('input');
   fileInput.id = 'fileInput';
