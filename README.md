@@ -45,3 +45,9 @@ My Spiffy App is MIT Licensed. See LICENSE for details.
 
 ## Resources
 * [PDF.js](http://www.askapache.com/javascript/pdf-js.html)-[Page Number Docs](http://www.askapache.com/javascript/pdf-js.html#Options_after_the-s0)
+
+## For My Own Reference
+* Pushing to Heroku Staging Remote:Beta - `git push beta beta:master` 
+* Logs for Heroku Staging Remote:Beta - `heroku logs --tail --app beta-library`
+* Running Rails Console in Heroku Staging Remote:Beta: `heroku run rails c --app beta-library`
+
