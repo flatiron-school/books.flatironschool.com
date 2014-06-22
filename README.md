@@ -10,7 +10,7 @@ A database of books used in the Ruby classroom. Originally written by [den1k](ht
 * Beta Branch:   [beta-library.flatironschool](http://beta-library.herokuapp.com/)
 
 ## Local Setup
-
+* In the terminal, run `brew install imagemagick`.
 * Set AMAZON_KEY, AMAZON_SECRET, AMAZON_BUCKET, GITHUB_KEY, and GITHUB_SECRET in `config/application.yml`:
 ```
 AMAZON_KEY: NUMBERSANDLETTERS
@@ -20,7 +20,7 @@ GITHUB_KEY: NUMBERSANDLETTERS
 GITHUB_SECRET: NUMBERSANDLETTERS
 ```
 * Run `rake db:migrate`.
-* Run `rake db:seed` to add the organization flatiron-school-students to the organizations table.
+* Run `rake db:seed` to add the organization flatiron-school-students to the organizations table. If you would like to add more oragnizations, add them db/seeds.rb and re-run  `rake db:seed`.
 * Run local server with `rails s` and go to `http://localhost:3000/` in your browser before logging in via GitHub.
 * Set `User.last.update(:admin => true)` in the `rails console` to become an admin.
 
