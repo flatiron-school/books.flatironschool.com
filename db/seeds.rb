@@ -10,6 +10,7 @@
 # User.create(provider: "github", uid: "4651810", nickname: "den1k", admin: true, token: "f362d5cac8bb6857ed23698a2350e806770a0eb4")
 
 Organization.create(name: "flatiron-school-students")
+Organization.create(name: "flatiron-school")
 
 TAGS = %w(advanced beginner command command css d3 database gem html intermediate javascript library line line oop orm rails ruby sql)
 
