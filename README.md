@@ -11,6 +11,7 @@ A database of books used in the Ruby classroom. Originally written by [den1k](ht
 
 ## Local Setup
 * In the terminal, run `brew install imagemagick`.
+* In the terminal, run `brew install ghostscript`.
 * Set AMAZON_KEY, AMAZON_SECRET, AMAZON_BUCKET, GITHUB_KEY, and GITHUB_SECRET in `config/application.yml`:
 ```
 AMAZON_KEY: NUMBERSANDLETTERS
