@@ -53,9 +53,9 @@ var FindStates = {
   FIND_PENDING: 3
 };
 
-PDFJS.imageResourcesPath = '#{Rails.root}/assets/';
-  PDFJS.workerSrc = '#{Rails.root}/assets/pdf.worker.js';
-  PDFJS.cMapUrl = '#{Rails.root}/pdfjs/web/cmaps/';
+PDFJS.imageResourcesPath = '/pdfjs/web/images/';
+  PDFJS.workerSrc = '/assets/pdf.worker.js';
+  PDFJS.cMapUrl = '/pdfjs/web/cmaps/';
   PDFJS.cMapPacked = true;
 
 var mozL10n = document.mozL10n || document.webL10n;

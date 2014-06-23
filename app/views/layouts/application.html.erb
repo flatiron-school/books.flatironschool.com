@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr">
   <head>
     <title>Flatiron Library</title>
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -24,10 +24,10 @@
           <ul class="nav navbar-nav">
             <% if current_user %>
               <li><%= link_to "Library", books_path %></li>
-            <% end %> 
+            <% end %>
             <% if current_user && current_user.admin %>
               <li><%= link_to "Admin", admin_path %></li>
-            <% end %> 
+            <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <% if current_user %>
@@ -46,3 +46,4 @@
     </div>
   </body>
 </html>
+
