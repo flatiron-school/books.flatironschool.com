@@ -7,6 +7,7 @@
     <%= csrf_meta_tags %>
     <%= analytics_init if Rails.env.production? %>
     <link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>
+    <link href="/assets/logos/flatiron-favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
   </head>
   <body tabindex="1" class="<%= "#{params[:controller]} #{params[:action]}" %>">
     <div class="navbar navbar-default" role="navigation">
