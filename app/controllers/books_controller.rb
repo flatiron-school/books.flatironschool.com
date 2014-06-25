@@ -28,12 +28,6 @@ class BooksController < ApplicationController
     if request.path != book_path(@book)
       redirect_to @book, status: :moved_permanently
     end
-  end  
-
-  def show_pdf
-    params[:page] ||= 1
-
-    @book = Book.friendly.find(params[:id])
   end
 
   def destroy
