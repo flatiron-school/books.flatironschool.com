@@ -33,9 +33,9 @@ $(document).ready (function() {
     $("#type_file").click();
   })
 
-  $('#txtInput').click(function() { 
+  $('#txtInput').click(function() {
+    $(this).val(RAILS_ROOT + "#page=" + currentPageNumber);
     selectAllText($(this));
-    console.log("clicked");
   });
 
 })
