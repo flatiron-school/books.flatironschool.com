@@ -18,8 +18,8 @@ Bundler.require(*Rails.groups)
 
 module Booxr
   class Application < Rails::Application
-    config.assets.paths << "#{Rails.root}/app/assets/images/ios-style-checkboxes"
-    config.assets.paths << "#{Rails.root}/app/assets/images/iphone-style-checkboxes"
+    config.assets.paths << "#{Rails.root}/app/vendor/images/ios-style-checkboxes"
+    config.assets.paths << "#{Rails.root}/app/vendor/images/iphone-style-checkboxes"
     config.assets.paths << "#{Rails.root}/app/assets/images/pdfjs"
     config.assets.paths << "#{Rails.root}/app/assets/images/logos"
 
