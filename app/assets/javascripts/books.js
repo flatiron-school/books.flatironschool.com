@@ -4,6 +4,12 @@
 //
 //
 $(document).ready (function() {
+
+  function selectAllText(textbox) {
+    textbox.focus();
+    textbox.select();
+  }
+
   $('.list-group .chosen-select').chosen({width: "70%"});
   $('.chosen-select').chosen({width: "100%"});
 
@@ -27,28 +33,9 @@ $(document).ready (function() {
     $("#type_file").click();
   })
 
-})
-
-function insertPDF(url, page){
-  var bookPDF = new PDFObject({
-    url: url,
-    pdfOpenParams: {
-      page: page
-    }
-  }).embed("book");
-
-  return bookPDF;
-};
-
-function loadPDF(){
-  $("div#book[data-pdf-url]").exists(function(){
-    var pdfURL = $(this).data("pdf-url");
-    var pdfPage = $(this).data("pdf-page")
-    insertPDF(pdfURL, pdfPage)
+  $('#txtInput').click(function() { 
+    selectAllText($(this));
+    console.log("clicked");
   });
-};
 
-$(function(){
-  loadPDF();
-});
-
+})
