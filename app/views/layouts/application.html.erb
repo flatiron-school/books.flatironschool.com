@@ -32,9 +32,10 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <% if current_user %>
-              <li>
-                <%= link_to "Sign out", signout_path %>
-              </li>
+              <% if @book_show_page %>
+                <li><a href="/books/<%= @book.id %>">Link to Page</a></li>
+              <% end %>
+              <li><%= link_to "Sign out", signout_path %></li>
             <% else %>
               <li><a href="/auth/github">Sign in with GitHub</a></li>
             <% end %>
