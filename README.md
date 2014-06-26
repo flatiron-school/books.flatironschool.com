@@ -2,8 +2,7 @@
 
 ## Description
 
-A database of books used in the Ruby classroom. Originally written by [den1k](https://github.com/den1k/booxr) and [georgemayer](https://github.com/georgemayer/). To specify a page number for a PDF, simply add it to the end of the URL, like so: [http://books.flatironschool.com/books/77?page=24](http://books.flatironschool.com/books/77?page=24).
-
+A database of books used in the Ruby classroom. Originally written by [den1k](https://github.com/den1k/booxr) and [georgemayer](https://github.com/georgemayer/). To specify a page number for a PDF, simply add it to the end of the URL, like so: [http://beta-library.herokuapp.com/books/agile-web-development-with-rails-4#page=55](http://beta-library.herokuapp.com/books/agile-web-development-with-rails-4#page=55).
 ## Website Links
 * Original Site: [books.flatironschool](http://books.flatironschool.com/), repo [here](https://github.com/den1k/booxr)
 * Master Branch: [library.flatironschool](http://library.flatironschool.com/)
