@@ -19,6 +19,7 @@
 
     <script>
       var DEFAULT_URL = "<%= @book.pdf_url %>";
+      var RAILS_ROOT = "<%= root_url %>books/<%= @book.slug %>";
     </script>
     <script src="/assets/viewer.js"></script>
 
@@ -387,3 +388,10 @@
 <!-- HACK need an extra div to pair with the orphaned /div in surrounding application layout -->
 <div>
 <!-- /HACK -->
+
+<div class="current-page-link">
+  <p>Link to Page</p>
+  <form class="current-page-link-form">
+    <input id="txtInput" type="text" name="url-with-page" value="<%= root_url %>books/<%= @book.slug %>">
+  </form>
+</div>

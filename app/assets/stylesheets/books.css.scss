@@ -18,6 +18,15 @@ a:active {color:black;}
   margin-right: 0px !important;
 }
 
+.current-page-link {
+  position:fixed;
+  padding: 10px; 
+  background-color: #428BCA;
+  bottom:0px;
+  right:15px;
+  margin-bottom:0px;
+}
+
 .offscreen {
   position: absolute;
   top: -200px;
