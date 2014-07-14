@@ -2,10 +2,9 @@
 
 ## Description
 
-A database of books used in the Ruby classroom. Originally written by [den1k](https://github.com/den1k/booxr) and [georgemayer](https://github.com/georgemayer/). To specify a page number for a PDF, simply add it to the end of the URL, like so: [http://books.flatironschool.com/books/77?page=24](http://books.flatironschool.com/books/77?page=24).
-
+A database of books used in the Ruby classroom. Originally written by [den1k](https://github.com/den1k/booxr) and [georgemayer](https://github.com/georgemayer/). To specify a page number for a PDF, simply add it to the end of the URL, like so: [http://beta-library.herokuapp.com/books/agile-web-development-with-rails-4#page=55](http://beta-library.herokuapp.com/books/agile-web-development-with-rails-4#page=55).
 ## Website Links
-* Original Site: [books.flatironschool](http://books.flatironschool.com/)
+* Original Site: [books.flatironschool](http://books.flatironschool.com/), repo [here](https://github.com/den1k/booxr)
 * Master Branch: [library.flatironschool](http://library.flatironschool.com/)
 * Beta Branch:   [beta-library.flatironschool](http://beta-library.herokuapp.com/)
 
@@ -27,14 +26,19 @@ GITHUB_SECRET: NUMBERSANDLETTERS
 
 ## TODO
 
-1. Currently loading PDF from Mozilla first, where our aws link is passed in as params, with page number as second param --> clean up / fix
-2. ~~Slugify book name for params (instead of having ID)~~
-3. Support CHMs
-4. Better UX for mobile
-5. Flesh out downloading count to then have licensing countdown
-6. ~~Add way to make cover photo of PDFs~~
-7. Add way to manually upload cover photo
-8. ~~Add tags~~
+1. ~~Integrate PDF.JS~~
+2. ~~Add method for copying the url of pages~~
+3. ~~Slugify book name for params (instead of having ID)~~
+4. ~~Add way to make cover photo of PDFs~~
+5. ~~Add tags~~
+6. Better UX for mobile
+7. Figure out why `Automatic Zoom` on the `books/show` page has a weird character in the letter `m`
+8. Fix or disable the mulitple thumbnail page view on the `books/show` page that cuts pages off vertically
+9. Enhance the speed of the heroku app
+10. Flesh out downloading count to then have licensing countdown
+11. Add feature to manually upload cover photo in case PDF processing/epub processing doesn't yield one
+12. Fix the `fix unresolved uploads` feature on the admin page
+13. Support CHMs
 
 ## Author
 
@@ -48,7 +52,6 @@ My Spiffy App is MIT Licensed. See LICENSE for details.
 * [PDF.js](http://www.askapache.com/javascript/pdf-js.html)-[Page Number Docs](http://www.askapache.com/javascript/pdf-js.html#Options_after_the-s0)
 
 ## For My Own Reference
-* currentPageNumber will give the page number
 * Pushing to Heroku Staging Remote:Beta - `git push beta beta:master` 
 * Logs for Heroku Staging Remote:Beta - `heroku logs --tail --app beta-library`
 * Running Rails Console in Heroku Staging Remote:Beta: `heroku run rails c --app beta-library`
