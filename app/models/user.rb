@@ -23,4 +23,11 @@ class User < ActiveRecord::Base
     joins(:books).where("books.id IN (?)", books)
   end
 
+  before_save do |user|
+    staff_nicknames = ["adamjonas", "aenbar", "ahimmelstoss", "alexgorski", "altyus", "andrewcallahan", "anisharamnani", "arelenglish", "aviflombaum", "blake41", "BradWheel", "chrisgonzgonz", "Clee681", "copasetickid", "danielchangNYC", "dfenjves", "dgabeau", "ebjacobs", "eewang", "flatiron-bot", "github-hirebot", "github-registrarbot", "hackygolucky", "irmiller22", "jmburges", "JohnKellyFerguson", "jongrover", "kcurtin", "kthffmn"]
+    if staff_nicknames.include?(user.nickname)
+      user.admin = true
+    end
+  end
+
 end
