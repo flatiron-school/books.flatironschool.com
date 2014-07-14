@@ -24,7 +24,8 @@ class User < ActiveRecord::Base
   end
 
   before_save do |user|
-    if user.nickname == "aviflombaum" || user.nickname == "kthffmn"
+    staff_nicknames = ["adamjonas", "aenbar", "ahimmelstoss", "alexgorski", "altyus", "andrewcallahan", "anisharamnani", "arelenglish", "aviflombaum", "blake41", "BradWheel", "chrisgonzgonz", "Clee681", "copasetickid", "danielchangNYC", "dfenjves", "dgabeau", "ebjacobs", "eewang", "flatiron-bot", "github-hirebot", "github-registrarbot", "hackygolucky", "irmiller22", "jmburges", "JohnKellyFerguson", "jongrover", "kcurtin", "kthffmn"]
+    if staff_nicknames.include?(user.nickname)
       user.admin = true
     end
   end
