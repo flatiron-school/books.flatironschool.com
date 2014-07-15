@@ -3,10 +3,14 @@
 ## Description
 
 A database of books used in the Ruby classroom. Originally written by [den1k](https://github.com/den1k/booxr) and [georgemayer](https://github.com/georgemayer/). To specify a page number for a PDF, simply add it to the end of the URL, like so: [http://beta-library.herokuapp.com/books/agile-web-development-with-rails-4#page=55](http://beta-library.herokuapp.com/books/agile-web-development-with-rails-4#page=55).
-## Website Links
-* Original Site: [books.flatironschool](http://books.flatironschool.com/), repo [here](https://github.com/den1k/booxr)
-* Master Branch: [library.flatironschool](http://library.flatironschool.com/)
-* Beta Branch:   [beta-library.flatironschool](http://beta-library.herokuapp.com/)
+
+## Application Environments and Heroku Apps
+
+| Environment | Heroku App     | Domain                               | Github Repo                                                | Branch |
+|-------------|----------------|--------------------------------------|------------------------------------------------------------|--------|
+| Production  | flatiron-books | http://books.flatironschool.com      | http://github.com/flatiron-school/books.flatironschool.com | master |
+| Beta        | beta-library   | http://beta.books.flatironschool.com | http://github.com/flatiron-school/books.flatironschool.com | beta   |
+|             |                |                                      |                                                            |        |
 
 ## Local Setup
 * In the terminal, run `brew install imagemagick`.
