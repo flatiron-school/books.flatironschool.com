@@ -9,7 +9,7 @@ A database of books used in the Ruby classroom. Originally written by [den1k](ht
 | Environment | Heroku App     | Domain                               | Github Repo                                                | Branch |
 |-------------|----------------|--------------------------------------|------------------------------------------------------------|--------|
 | Production  | flatiron-books | http://books.flatironschool.com      | http://github.com/flatiron-school/books.flatironschool.com | master |
-| Beta        | beta-library   | http://beta.books.flatironschool.com | http://github.com/flatiron-school/books.flatironschool.com | beta   |
+| Beta        | beta-library   | http://beta.books.flatironschool.com | http://github.com/flatiron-school/books.flatironschool.com | functional   |
 |             |                |                                      |                                                            |        |
 
 ## Local Setup
