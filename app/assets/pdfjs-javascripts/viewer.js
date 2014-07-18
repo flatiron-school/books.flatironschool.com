@@ -54,7 +54,7 @@ var FindStates = {
 };
 
 PDFJS.imageResourcesPath = '/pdfjs/web/images/';
-  PDFJS.workerSrc = '/assets/pdf.worker.js';
+  PDFJS.workerSrc = '/assets/worker.js';
   PDFJS.cMapUrl = '/pdfjs/web/cmaps/';
   PDFJS.cMapPacked = true;
 
